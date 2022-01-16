@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+	<session-factory>
+		<!-- JDBC Database connection settings -->
+
+		<property name="connection.driver_class">NHibernate.Driver.SQLite20Driver</property>
+		<property name="connection.connection_string">Data Source=Database.db;Version=3;New=True;journal mode=Wal;</property>
+		<property name="dialect">NHibernate.Dialect.SQLiteDialect</property>
+
+		<!-- Select our SQL dialect -->
+		<!-- Echo the SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<!-- Drop and re-create the database schema on startup -->
+		<!-- <property name="hbm2ddl.auto">create-drop</property> -->
+
+	</session-factory>
+</hibernate-configuration>

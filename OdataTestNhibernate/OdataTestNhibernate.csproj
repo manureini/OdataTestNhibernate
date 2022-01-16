@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Mappings\School.hbm.xml" />
+	  <None Remove="Mappings\Students.hbm.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Mappings\School.hbm.xml" />
+	  <EmbeddedResource Include="Mappings\Students.hbm.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.6" />
+		<PackageReference Include="NHibernate" Version="5.3.10" />
+		<PackageReference Include="System.Data.SQLite.Core" Version="1.0.115.5" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="hibernate.cfg.xml">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
