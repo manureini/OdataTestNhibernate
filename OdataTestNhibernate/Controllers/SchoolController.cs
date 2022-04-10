@@ -36,10 +36,19 @@ namespace OdataTestNhibernate.Controllers
                 {
                     Id = Guid.NewGuid(),
                     Name = "Alice",
+                    School = school,
+                }; 
+                
+                var student1 = new Student()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Bob",
+                    School = school,
                 };
 
                 mSession.Save(school);
                 mSession.Save(student);
+                mSession.Save(student1);
                 mSession.Flush();
             }
 

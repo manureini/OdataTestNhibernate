@@ -5,6 +5,9 @@ using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
 using OdataTestNhibernate;
 using OdataTestNhibernate.Models;
+using System.IO;
+
+File.Delete("Database.db");
 
 var builder = WebApplication.CreateBuilder(args);
 

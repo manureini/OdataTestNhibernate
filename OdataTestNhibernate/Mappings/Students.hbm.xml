@@ -11,6 +11,8 @@
 		</id>
 
 		<property name="Name" />
+		<many-to-one name="School" column="SchoolId" />
+		
 	</class>
 
 </hibernate-mapping>
